@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/greencard/static/js/main.84c5c01b.js",
+    "static/js/105.0ac50293.chunk.js": "/greencard/static/js/105.0ac50293.chunk.js",
+    "static/js/718.1f5465b9.chunk.js": "/greencard/static/js/718.1f5465b9.chunk.js",
+    "index.html": "/greencard/index.html",
+    "main.84c5c01b.js.map": "/greencard/static/js/main.84c5c01b.js.map",
+    "105.0ac50293.chunk.js.map": "/greencard/static/js/105.0ac50293.chunk.js.map",
+    "718.1f5465b9.chunk.js.map": "/greencard/static/js/718.1f5465b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.84c5c01b.js"
+  ]
+}
