@@ -1,45 +1,65 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Form from '@rjsf/core';
 import validator from '@rjsf/validator-ajv8';
+import * as Realm from "realm-web";
+import './Register.css'; // Import CSS file
+const app = new Realm.App({ id: process.env.REACT_APP_REALM_ID });
 
-const Register = ({setNavigate}) => {
+const Register = ( probs) => {
+  const [isLoading, setIsLoading] = useState(false);
   const schema = {
     type: 'object',
-    required: ['email', 'password'],
+    required: ['email', 'password', 'confirm'],
     properties: {
       email: { type: 'string', title: 'Tên đăng nhập' },
       password: { type: 'string', title: 'Mật khẩu', format: 'password' },
       confirm: { type: 'string', title: 'Xác nhận mật khẩu', format: 'password' }
     }
-  }
+  };
+
   const uiSchema = {
     "ui:submitButtonOptions": {
       "props": {
         "disabled": false,
-       
       },
       "norender": false,
       "submitText": "Đăng ký",
-     
     }
   };
-  const onSubmit= ({formData})=>{
-    console.log(formData)
-    setNavigate('login')
-  }
+
+  const onSubmit = async ({ formData }) => {
+    setIsLoading(true);
+    const { email, password, confirm } = formData;
+    if (password === confirm) {
+      try {
+        await app.emailPasswordAuth.registerUser({ email, password });
+        probs.setNavigate("login")
+        window.location.reload();
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
+      }
+    } else {
+      alert('password not match');
+      setIsLoading(false);
+    }
+  };
 
   return (
-    <div>
+    <div className='container-wrapper'>
+    <div className="containers">
+      {isLoading && <div className="spinner">Loading...</div>}
       <Form
-    schema={schema}
-    validator={validator}
-    uiSchema={uiSchema}
-    onSubmit={onSubmit}
- 
-  />
-    
-    </div>
-  )
-}
+        schema={schema}
+        validator={validator}
+        uiSchema={uiSchema}
+        onSubmit={onSubmit}
+        disabled={isLoading}
+      />
+      <p className="text-blue-500  mt-4 cursor-pointer  hover:underline"  onClick={() => probs.setNavigate('login')}>Trở lại đăng nhập</p>
+    </div></div>
+  );
+};
 
-export default Register
+export default Register;
