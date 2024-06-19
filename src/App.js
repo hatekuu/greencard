@@ -50,7 +50,7 @@ function App() {
       case 'home':
         return <Home setNavigate={setNavigate} user={user}/>;
       default:
-        return <Login setNavigate={setNavigate} user={user} navigate={navigate}/>; // Trả về null nếu navigate không khớp với các trường hợp trên
+        return <Home setNavigate={setNavigate} user={user}/>; // Trả về null nếu navigate không khớp với các trường hợp trên
     }
   };
   return (
