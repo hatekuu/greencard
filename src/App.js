@@ -7,8 +7,9 @@ import Toolbar from "./routers/main/components/ToolBar";
 import * as Realm from 'realm-web';
 
 const app = new Realm.App({ id: process.env.REACT_APP_REALM_ID });
-
-const Main = lazy(() => import("./routers/main/main"));
+const Project = lazy(() => import( "./routers/project/project"));
+const Contactt = lazy(() => import( "./routers/main/contact/Contact"));
+const About = lazy(() => import("./routers/main/about/About"));
 const Confirmps = lazy(() => import("./routers/main/login/confirmps"));
 const Confirmrg = lazy(() => import("./routers/main/register/confirmrg"));
 const AdminPage = lazy(() => import("./admin/main/main"));
@@ -70,6 +71,9 @@ function App() {
                 <Route path="/greencard" element={<RenderComponent />} />
                 <Route path="/greencard/confirmps" element={<Confirmps />} />
                 <Route path="/greencard/confirmrg" element={<Confirmrg />} />
+                <Route path="/greencard/contact" element={<Contactt />} />
+                <Route path="/greencard/about" element={<About />} />
+                <Route path="/greencard/projects" element={<Project />} />
                 <Route path="/greencard/admin" element={<AdminPage user={user} />} />
               </Routes>
             </Suspense>

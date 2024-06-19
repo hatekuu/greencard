@@ -57,10 +57,10 @@ const NavBar = (props) => {
         <nav className="flex items-center space-x-12  ">
       
           <button onClick={() => { props.setNavigate('home'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md ">Trang chủ</button>
-          <button onClick={() => { props.setNavigate('about'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md  ">Giới thiệu</button>
-          <button onClick={() => { props.setNavigate('products'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md">Sản phẩm</button>
-          <button onClick={() => { props.setNavigate('contact'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md">Liên hệ</button>
-          <button onClick={() => { props.setNavigate('projects'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md">Dự án</button>
+          <button onClick={() => { props.setNavigate('about'); window.location.href = "/greencard/about" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md  ">Giới thiệu</button>
+          <button onClick={() => { props.setNavigate('home'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md">Sản phẩm</button>
+          <button onClick={() => { props.setNavigate('contact'); window.location.href = "/greencard/contact" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md">Liên hệ</button>
+          <button onClick={() => { props.setNavigate('projects'); window.location.href = "/greencard/projects" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md">Dự án</button>
         </nav>
 
         {/* Search Bar */}
