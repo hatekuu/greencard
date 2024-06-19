@@ -16,10 +16,15 @@
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
-      margin-left: 300px;
+      margin-left: 600px;
       margin-top: -200px;
     }
-    
+   
+    @media (max-width: 968px) {
+      .containers {
+        margin-left: 100px;
+      }
+    }
     /* Form element styles */
     .rjsf form {
       display: flex;

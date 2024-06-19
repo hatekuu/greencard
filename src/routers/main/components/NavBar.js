@@ -1,17 +1,22 @@
 import React from 'react';
 
 const NavBar = (props) => {
+  const HamburgerIcon = () => (
+    <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+    </svg>
+  );
   return (
     <div className="navbar bg-gray-100 text-black fixed top-0 left-0 right-0 z-10">
       {/* Top Section (Logo, Hotline, User Options) */}
-      <div className="flex items-center justify-between py-4 px-32 h-20">
+      <div className="flex items-center justify-between py-4 px-28 h-20 max-lg:px-12">
         {/* Left Section (Logo and Hotline) */}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           {/* Logo */}
-          <img src="https://i.imgur.com/jnhI9YH.png" alt="Logo" className="h-28 ml-24" onClick={() => { props.setNavigate('home'); window.location.href = "/greencard" }} />
+          <img src="https://i.imgur.com/jnhI9YH.png" alt="Logo" className="h-28 ml-8 max-lg:ml-0" onClick={() => { props.setNavigate('home'); window.location.href = "/greencard" }} />
 
           {/* Hotline */}
-          <div className="ml-8">
+          <div className="ml-8 max-lg:ml-0">
             <span className="text-sm font-semibold">Hotline: 123-456-789</span>
           </div>
         </div>
@@ -36,12 +41,21 @@ const NavBar = (props) => {
             </button>
           </div>
         </div>
+        <div className=" relative left-14 flex flex-col justify-items-center  rounded-md py-4 px-6 lg:hidden h-10 w-16" >
+      <button
+            className="text-base "
+       
+          >
+            <HamburgerIcon />
+          </button></div>
       </div>
-
+    
       {/* Bottom Section (Navigation Options and Search Bar) */}
-      <div className="flex justify-between relative left-14  rounded-md bg-gray-200 py-4 px-32" style={{height:55, width:1500}}>
+     
+      <div className="flex justify-between relative left-14  rounded-md bg-gray-200 py-4 px-32 max-lg:hidden" style={{height:55, width:1400}}>
         {/* Navigation Options */}
-        <nav className="flex items-center space-x-12 ">
+        <nav className="flex items-center space-x-12  ">
+      
           <button onClick={() => { props.setNavigate('home'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md ">Trang chủ</button>
           <button onClick={() => { props.setNavigate('about'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md  ">Giới thiệu</button>
           <button onClick={() => { props.setNavigate('products'); window.location.href = "/greencard" }} className="text-lg font-semibold hover:bg-gray-300 h-14 w-24 rounded-md">Sản phẩm</button>

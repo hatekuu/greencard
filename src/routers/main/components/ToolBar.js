@@ -4,7 +4,7 @@ const Toolbar = () => {
 
 
   return (
-    <div className="relative -left-20 -top-32 text-black shadow-lg rounded-lg" style={{ height: 'auto', width: '250px' }}>
+    <div className="relative -left-20 -top-32 text-black shadow-lg rounded-lg max-lg:hidden" style={{ height: 'auto', width: '250px' }}>
     <div className="p-6 bg-gray-100">
       <h2 className="text-xl font-bold mb-6 text-center">Danh mục sản phẩm</h2>
       <ul>

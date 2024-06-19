@@ -59,9 +59,10 @@ function App() {
           <NavBar setNavigate={setNavigate} setLogout={setLogout} user={user} />
         </header>
         <div className="flex flex-grow">
-          <aside className="w-32 p-48">
+        {navigate === 'home' && (
+          <aside className="w-32 p-48 max-lg:p-4">
             <Toolbar  />
-          </aside>
+          </aside>)}
           <main className="flex-grow">
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
