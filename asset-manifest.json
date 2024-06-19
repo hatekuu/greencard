@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/greencard/static/css/main.0b34059c.css",
-    "main.js": "/greencard/static/js/main.9b10fdb3.js",
-    "static/js/821.3405ddda.chunk.js": "/greencard/static/js/821.3405ddda.chunk.js",
+    "main.css": "/greencard/static/css/main.03178c2e.css",
+    "main.js": "/greencard/static/js/main.21b660c3.js",
+    "static/js/682.cf96fadf.chunk.js": "/greencard/static/js/682.cf96fadf.chunk.js",
+    "static/js/720.03da11bb.chunk.js": "/greencard/static/js/720.03da11bb.chunk.js",
+    "static/js/712.69eb362a.chunk.js": "/greencard/static/js/712.69eb362a.chunk.js",
     "static/js/860.c683876f.chunk.js": "/greencard/static/js/860.c683876f.chunk.js",
     "static/js/202.7759d92e.chunk.js": "/greencard/static/js/202.7759d92e.chunk.js",
     "static/css/439.f013f7da.chunk.css": "/greencard/static/css/439.f013f7da.chunk.css",
@@ -14,8 +16,11 @@
     "static/js/826.af06981e.chunk.js": "/greencard/static/js/826.af06981e.chunk.js",
     "static/js/718.1f5465b9.chunk.js": "/greencard/static/js/718.1f5465b9.chunk.js",
     "index.html": "/greencard/index.html",
-    "main.0b34059c.css.map": "/greencard/static/css/main.0b34059c.css.map",
-    "main.9b10fdb3.js.map": "/greencard/static/js/main.9b10fdb3.js.map",
+    "main.03178c2e.css.map": "/greencard/static/css/main.03178c2e.css.map",
+    "main.21b660c3.js.map": "/greencard/static/js/main.21b660c3.js.map",
+    "682.cf96fadf.chunk.js.map": "/greencard/static/js/682.cf96fadf.chunk.js.map",
+    "720.03da11bb.chunk.js.map": "/greencard/static/js/720.03da11bb.chunk.js.map",
+    "712.69eb362a.chunk.js.map": "/greencard/static/js/712.69eb362a.chunk.js.map",
     "860.c683876f.chunk.js.map": "/greencard/static/js/860.c683876f.chunk.js.map",
     "202.7759d92e.chunk.js.map": "/greencard/static/js/202.7759d92e.chunk.js.map",
     "439.f013f7da.chunk.css.map": "/greencard/static/css/439.f013f7da.chunk.css.map",
@@ -28,7 +33,7 @@
     "718.1f5465b9.chunk.js.map": "/greencard/static/js/718.1f5465b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b34059c.css",
-    "static/js/main.9b10fdb3.js"
+    "static/css/main.03178c2e.css",
+    "static/js/main.21b660c3.js"
   ]
 }
