@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/greencard/static/css/main.03178c2e.css",
-    "main.js": "/greencard/static/js/main.b23107e1.js",
+    "main.css": "/greencard/static/css/main.79e5c54e.css",
+    "main.js": "/greencard/static/js/main.bb6f19bd.js",
     "static/js/682.cf96fadf.chunk.js": "/greencard/static/js/682.cf96fadf.chunk.js",
-    "static/js/720.03da11bb.chunk.js": "/greencard/static/js/720.03da11bb.chunk.js",
+    "static/js/720.2c3c6328.chunk.js": "/greencard/static/js/720.2c3c6328.chunk.js",
     "static/js/712.69eb362a.chunk.js": "/greencard/static/js/712.69eb362a.chunk.js",
     "static/js/860.c683876f.chunk.js": "/greencard/static/js/860.c683876f.chunk.js",
     "static/js/202.7759d92e.chunk.js": "/greencard/static/js/202.7759d92e.chunk.js",
@@ -16,10 +16,10 @@
     "static/js/826.af06981e.chunk.js": "/greencard/static/js/826.af06981e.chunk.js",
     "static/js/718.1f5465b9.chunk.js": "/greencard/static/js/718.1f5465b9.chunk.js",
     "index.html": "/greencard/index.html",
-    "main.03178c2e.css.map": "/greencard/static/css/main.03178c2e.css.map",
-    "main.b23107e1.js.map": "/greencard/static/js/main.b23107e1.js.map",
+    "main.79e5c54e.css.map": "/greencard/static/css/main.79e5c54e.css.map",
+    "main.bb6f19bd.js.map": "/greencard/static/js/main.bb6f19bd.js.map",
     "682.cf96fadf.chunk.js.map": "/greencard/static/js/682.cf96fadf.chunk.js.map",
-    "720.03da11bb.chunk.js.map": "/greencard/static/js/720.03da11bb.chunk.js.map",
+    "720.2c3c6328.chunk.js.map": "/greencard/static/js/720.2c3c6328.chunk.js.map",
     "712.69eb362a.chunk.js.map": "/greencard/static/js/712.69eb362a.chunk.js.map",
     "860.c683876f.chunk.js.map": "/greencard/static/js/860.c683876f.chunk.js.map",
     "202.7759d92e.chunk.js.map": "/greencard/static/js/202.7759d92e.chunk.js.map",
@@ -33,7 +33,7 @@
     "718.1f5465b9.chunk.js.map": "/greencard/static/js/718.1f5465b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03178c2e.css",
-    "static/js/main.b23107e1.js"
+    "static/css/main.79e5c54e.css",
+    "static/js/main.bb6f19bd.js"
   ]
 }
