@@ -13,7 +13,7 @@ const Products = (probs) => {
             <img
               src={product?.image[0]}
               alt={product?.name}
-              className="mt-2 rounded-lg shadow-md object-contain w-full h-48" // Đặt kích thước hình ảnh và sử dụng object-contain
+              className="mt-2  rounded-lg shadow-md object-contain w-full h-48" // Đặt kích thước hình ảnh và sử dụng object-contain
             />
           </div>
         </div>
