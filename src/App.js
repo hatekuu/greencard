@@ -33,6 +33,7 @@ function App() {
     if (lougout) {
       try {
         await app.currentUser.logOut();
+        localStorage.setItem('inputValue', "login");
         window.location.href = "/greencard"; // Chuyển hướng sau khi đăng xuất
       } catch (error) {
         console.log(error);
@@ -48,18 +49,18 @@ function App() {
       case 'home':
         return <Home setNavigate={setNavigate} user={user}/>;
       default:
-        return null; // Trả về null nếu navigate không khớp với các trường hợp trên
+        return <Login setNavigate={setNavigate} user={user} navigate={navigate}/>; // Trả về null nếu navigate không khớp với các trường hợp trên
     }
   };
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        <header className="text-white p-9">
+        <header className="text-white p-28">
           <NavBar setNavigate={setNavigate} setLogout={setLogout} user={user} />
         </header>
         <div className="flex flex-grow">
-          <aside className="w-32 p-14">
-            <Toolbar />
+          <aside className="w-32 p-48">
+            <Toolbar  />
           </aside>
           <main className="flex-grow">
             <Suspense fallback={<div>Loading...</div>}>
