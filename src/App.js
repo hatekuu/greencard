@@ -64,7 +64,7 @@ function App() {
             <Toolbar  />
           </aside>)}
           <main className="flex-grow">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div className="spinner"></div>}>
               <Routes>
                 <Route path="/greencard/:productId" element={<ProductDetail />} />
                 <Route path="/greencard" element={<RenderComponent />} />

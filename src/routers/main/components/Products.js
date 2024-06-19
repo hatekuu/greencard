@@ -1,7 +1,12 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 const Products = (probs) => {
+
     const navigate = useNavigate();
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+  
   return (
     <div className="p-4">
     <h2 className="text-2xl font-bold mb-4">Danh sách sản phẩm</h2>
