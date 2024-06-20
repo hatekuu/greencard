@@ -24,7 +24,7 @@ const NavBar = (props) => {
         {/* Left Section (Logo and Hotline) */}
         <div className="flex items-center ">
           {/* Logo */}
-          <img src="https://i.imgur.com/jnhI9YH.png" alt="Logo" className="h-28 ml-8 max-lg:ml-0" onClick={() => { props.setNavigate('home'); window.location.href = "/greencard" }} />
+          <img src="https://i.imgur.com/jnhI9YH.png" alt="Logo" className="h-28 ml-8 max-lg:h-20 max-lg:-ml-4" onClick={() => { props.setNavigate('home'); window.location.href = "/greencard" }} />
 
           {/* Hotline */}
           <div className="ml-8 max-lg:ml-0">

@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 relative left-16 w-11/12">
+    <div className="container mx-auto p-4 relative left-16 w-11/12 max-lg:left-5">
       <h2 className="text-2xl font-bold mb-4">Liên hệ chúng tôi</h2>
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">

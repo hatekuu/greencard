@@ -62,13 +62,13 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
       
-        <header className="text-white p-28">
+        <header className="text-white p-28 max-lg:p-0">
     
           <NavBar setNavigate={setNavigate} setLogout={setLogout} user={user} setNabar={setNabar} navbar={navbar}/>
         </header>
         <div className="flex flex-grow">
         {show && (
-          <aside className="w-32 p-48 max-lg:p-4">
+          <aside className="w-32 p-48 max-lg:p-0">
             <Toolbar setNabar={setNabar} navbar={navbar}  />
           </aside>)}
           <main className="flex-grow">

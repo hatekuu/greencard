@@ -20,7 +20,7 @@ const Home = (probs) => {
   };
 
   return (
-    <div>
+    <div className=' max-lg:mt-20'>
       <Products data={data}/>
     </div>
   );
