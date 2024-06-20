@@ -8,7 +8,7 @@ const Products = (probs) => {
     }, []);
   
   return (
-    <div className="p-4">
+    <div className="p-4 max-lg:relative -left-10">
     <h2 className="text-2xl font-bold mb-4">Danh sách sản phẩm</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
       {probs.data.map((product) => (

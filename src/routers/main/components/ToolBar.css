@@ -1,0 +1,18 @@
+/* Toolbar.css */
+.toolbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền đen với độ mờ */
+    z-index: 999; /* Độ sâu của cửa sổ popup */
+    display: none; /* Ban đầu ẩn đi */
+  }
+  
+  .toolbar-container.active {
+    display: block; /* Hiển thị khi được kích hoạt */
+  }
+  
+  /* CSS cho Toolbar đã được mô tả trong phần trước */
+  

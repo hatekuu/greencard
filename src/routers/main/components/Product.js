@@ -19,8 +19,7 @@ const ProductDetail = () => {
           { headers: { 'Content-Type': 'application/json' } }
         );
         const fetchedData = response.data;
-        console.log(fetchedData); // Check fetched data in console
-
+       
         setProduct(fetchedData); // Update product state with fetched data
       } catch (error) {
         console.error('Error fetching data: ', error.message);

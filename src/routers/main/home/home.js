@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Products from '../components/Products';
-const Home = () => {
+const Home = (probs) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    probs.setShow(true)
     fetchData();
   }, []); // Chỉ chạy lại khi component mount lần đầu
 

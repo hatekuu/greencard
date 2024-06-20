@@ -6,6 +6,7 @@ import NavBar from "./routers/main/components/NavBar";
 import Toolbar from "./routers/main/components/ToolBar";
 import * as Realm from 'realm-web';
 
+
 const app = new Realm.App({ id: process.env.REACT_APP_REALM_ID });
 const Project = lazy(() => import( "./routers/project/project"));
 const Contactt = lazy(() => import( "./routers/main/contact/Contact"));
@@ -18,15 +19,19 @@ const Login = lazy(() => import("./routers/main/login/login"));
 const Home = lazy(() => import("./routers/main/home/home"));
 
 function App() {
+  const [show,setShow]=useState(false)
+  const [navbar,setNabar]=useState(false)
+  const [toolbar,setToolBar]=useState(false)
   const [lougout, setLogout] = useState(false);
   const [navigate, setNavigate] = useState(() => {
     return localStorage.getItem('inputValue') || '';
   });
   const user = app.currentUser;
-
+ 
   useEffect(() => {
+   
     localStorage.setItem('inputValue', navigate);
-    console.log(navigate);
+ 
     fetchData();
   }, [lougout, navigate, user]);
 
@@ -48,21 +53,23 @@ function App() {
       case 'register':
         return <Register setNavigate={setNavigate} />;
       case 'home':
-        return <Home setNavigate={setNavigate} user={user}/>;
+        return <Home setShow={setShow}  user={user}/>;
       default:
-        return <Home setNavigate={setNavigate} user={user}/>; // Trả về null nếu navigate không khớp với các trường hợp trên
+        return <Home setShow={setShow} user={user}/>; // Trả về null nếu navigate không khớp với các trường hợp trên
     }
   };
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
+      
         <header className="text-white p-28">
-          <NavBar setNavigate={setNavigate} setLogout={setLogout} user={user} />
+    
+          <NavBar setNavigate={setNavigate} setLogout={setLogout} user={user} setNabar={setNabar} navbar={navbar}/>
         </header>
         <div className="flex flex-grow">
-        {navigate === 'home' && (
+        {show && (
           <aside className="w-32 p-48 max-lg:p-4">
-            <Toolbar  />
+            <Toolbar setNabar={setNabar} navbar={navbar}  />
           </aside>)}
           <main className="flex-grow">
             <Suspense fallback={<div className="spinner"></div>}>

@@ -1,11 +1,22 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 
+import "./Hamburger.css"
 const NavBar = (props) => {
-  const HamburgerIcon = () => (
-    <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-    </svg>
-  );
+  
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+   if(!props.navbar){
+    setIsOpen(false);
+   }
+  }, [props.navbar]);
+  const toggleMenu = () => {
+      setIsOpen(!isOpen);
+      props.setNabar(true)
+  };
+  const handleSearch = () => {
+      // Your search logic here
+      console.log('Searching...');
+  };
   return (
     <div className="navbar bg-gray-100 text-black fixed top-0 left-0 right-0 z-10">
       {/* Top Section (Logo, Hotline, User Options) */}
@@ -25,15 +36,15 @@ const NavBar = (props) => {
         <div className="flex items-center space-x-4">
           {!props.user ? (
             <>
-              <button onClick={() => { props.setNavigate('login'); window.location.href = "/greencard" }} className="text-base font-semibold">Đăng nhập</button>
-              <button onClick={() => { props.setNavigate('register'); window.location.href = "/greencard" }} className="text-base font-semibold">Đăng ký</button>
+              <button onClick={() => { props.setNavigate('login'); window.location.href = "/greencard" }} className="text-base font-semibold max-lg:hidden">Đăng nhập</button>
+              <button onClick={() => { props.setNavigate('register'); window.location.href = "/greencard" }} className="text-base font-semibold max-lg:hidden">Đăng ký</button>
             </>
           ) : (
-            <button onClick={() => props.setLogout(true)} className="text-base font-semibold">Đăng xuất</button>
+            <button onClick={() => props.setLogout(true)} className="text-base font-semibold max-lg:hidden">Đăng xuất</button>
           )}
 
-          {/* Cart Icon */}
-          <div className="relative">
+          {/* Cart Icon */} 
+          <div className="relative max-xl:hidden">
             <button className="text-base font-semibold relative">
               Giỏ hàng
               <span className="absolute top-1 right: 0 bg-red-500 text-white rounded-full px-4 py-1 text-xs">0</span>
@@ -42,12 +53,41 @@ const NavBar = (props) => {
           </div>
         </div>
         <div className=" relative left-14 flex flex-col justify-items-center  rounded-md py-4 px-6 lg:hidden h-10 w-16" >
-      <button
-            className="text-base "
-       
-          >
-            <HamburgerIcon />
-          </button></div>
+      
+        <div className="hamburger-container">
+        <div className="hamburger" onClick={toggleMenu}>
+            <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+            <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+            <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+        </div>
+        
+        <div className={`menu ${isOpen? 'open' : ''}`}>
+            <div className="menu-box">
+            <div className="search-wrapper">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button onClick={handleSearch}>Tìm</button>
+            </div>
+            <p onClick={() => { props.setNavigate('home'); window.location.href = "/greencard"} }>Trang chủ</p>
+            <p onClick={() => { props.setNavigate('about'); window.location.href = "/greencard/about" }}>Giới thiệu</p>
+            <p onClick={() => { props.setNavigate('home'); window.location.href = "/greencard"}}>Sản phẩm</p>
+            <p onClick={() => { props.setNavigate('contact'); window.location.href = "/greencard/contact" }}>Liên hệ</p>
+            <p onClick={() => { props.setNavigate('projects'); window.location.href = "/greencard/projects" }}>Dự án</p>
+            {!props.user ? (
+                <>
+                <p onClick={() => { props.setNavigate('login');    window.location.href = "/greencard"} }>Đăng nhập</p>
+                <p onClick={() => { props.setNavigate('register');   window.location.href = "/greencard"}} >Đăng ký</p>
+                </>
+            ) : (
+                <>
+                        <p  >Giỏ hàng</p>
+                <p onClick={() => props.setLogout(true)} >Đăng xuất</p>
+        
+               </>
+            )}
+            </div>
+        </div>
+        </div>
+         </div>
       </div>
     
       {/* Bottom Section (Navigation Options and Search Bar) */}
@@ -71,6 +111,7 @@ const NavBar = (props) => {
           </button>
         </div>
       </div>
+  
     </div>
   );
 };
