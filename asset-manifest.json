@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/greencard/static/css/main.79e5c54e.css",
-    "main.js": "/greencard/static/js/main.bb6f19bd.js",
+    "main.css": "/greencard/static/css/main.a92c0eb6.css",
+    "main.js": "/greencard/static/js/main.fcfd25a0.js",
     "static/js/682.cf96fadf.chunk.js": "/greencard/static/js/682.cf96fadf.chunk.js",
     "static/js/720.2c3c6328.chunk.js": "/greencard/static/js/720.2c3c6328.chunk.js",
     "static/js/712.69eb362a.chunk.js": "/greencard/static/js/712.69eb362a.chunk.js",
@@ -13,11 +13,11 @@
     "static/js/109.056b9947.chunk.js": "/greencard/static/js/109.056b9947.chunk.js",
     "static/css/867.637fadf1.chunk.css": "/greencard/static/css/867.637fadf1.chunk.css",
     "static/js/867.a8eb5f59.chunk.js": "/greencard/static/js/867.a8eb5f59.chunk.js",
-    "static/js/826.af06981e.chunk.js": "/greencard/static/js/826.af06981e.chunk.js",
+    "static/js/826.d370e6e8.chunk.js": "/greencard/static/js/826.d370e6e8.chunk.js",
     "static/js/718.1f5465b9.chunk.js": "/greencard/static/js/718.1f5465b9.chunk.js",
     "index.html": "/greencard/index.html",
-    "main.79e5c54e.css.map": "/greencard/static/css/main.79e5c54e.css.map",
-    "main.bb6f19bd.js.map": "/greencard/static/js/main.bb6f19bd.js.map",
+    "main.a92c0eb6.css.map": "/greencard/static/css/main.a92c0eb6.css.map",
+    "main.fcfd25a0.js.map": "/greencard/static/js/main.fcfd25a0.js.map",
     "682.cf96fadf.chunk.js.map": "/greencard/static/js/682.cf96fadf.chunk.js.map",
     "720.2c3c6328.chunk.js.map": "/greencard/static/js/720.2c3c6328.chunk.js.map",
     "712.69eb362a.chunk.js.map": "/greencard/static/js/712.69eb362a.chunk.js.map",
@@ -29,11 +29,11 @@
     "109.056b9947.chunk.js.map": "/greencard/static/js/109.056b9947.chunk.js.map",
     "867.637fadf1.chunk.css.map": "/greencard/static/css/867.637fadf1.chunk.css.map",
     "867.a8eb5f59.chunk.js.map": "/greencard/static/js/867.a8eb5f59.chunk.js.map",
-    "826.af06981e.chunk.js.map": "/greencard/static/js/826.af06981e.chunk.js.map",
+    "826.d370e6e8.chunk.js.map": "/greencard/static/js/826.d370e6e8.chunk.js.map",
     "718.1f5465b9.chunk.js.map": "/greencard/static/js/718.1f5465b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.79e5c54e.css",
-    "static/js/main.bb6f19bd.js"
+    "static/css/main.a92c0eb6.css",
+    "static/js/main.fcfd25a0.js"
   ]
 }
