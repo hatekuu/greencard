@@ -23,7 +23,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <div className="container mx-auto p-4 relative left-11">
+    <div className="container mx-auto p-4 relative left-0">
       <h1 className="text-4xl font-bold mb-8">Dự Án</h1>
       
       {/* Project List */}
