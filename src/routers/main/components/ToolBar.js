@@ -47,11 +47,11 @@ const handlePress = () => {
     </div>
 
   </div>
- <button className={`fixed -left-3  top-72 w-5 h-10  overflow-hidden px-4  z-10 bg-slate-500 rounded-md shadow-md opacity-40 hover:opacity-80
+ <button className={`fixed -left-3  top-72 w-5 h-10  overflow-hidden px-4  z-10 bg-slate-500 rounded-md shadow-md opacity-40 hover:opacity-80 lg:hidden
   ${open ? 'left-1 translate-x-60' : 'py-0 translate-x-0'}
   transition-all duration-300
 `} onClick={handlePress}>  
-  <span className="relative z-10 mr-3 mt-1.5 text-2xl text-black font-bold">{open  ? <p className='mt-1'>&lt;</p> : <p className='mt-1'>&gt;</p>}</span>
+  <span className='relative z-10 mr-3 mt-1.5 text-2xl text-black font-bold'>{open  ? <p className='mt-1'>&lt;</p> : <p className='mt-1'>&gt;</p>}</span>
 </button>
 
   <div className={`fixed top-28 z-10 ${open ? 'left-1 translate-x-[-12px]' : 'translate-x-[-300px]'} transition-all duration-300`}> 
